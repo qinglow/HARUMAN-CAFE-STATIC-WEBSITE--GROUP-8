@@ -1,0 +1,865 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+section {
+    height: 100vh;
+
+
+    scroll-snap-align: start;
+}
+
+header {
+    width: 100%;
+    z-index: 100;
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    user-select: none;
+    align-items: center;
+    text-align: center;
+}
+
+.nav {
+    height: 80px;
+    background-color: #FFFCF7;
+    border-bottom: 3px solid #FFE341;
+}
+
+.logo-container {
+    margin-top: auto;
+    width: 150px;
+    height: 150px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-links {
+    width: 90%;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.link {
+    position: relative;
+    display: inline-block;
+
+    text-decoration: none;
+    color: #444;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.link::after {
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+
+    background-color: #FFE341;
+
+    transform: scaleX(0);
+    transition: .3s;
+}
+
+.link:hover {
+    color: #000;
+    font-weight: 600;
+}
+
+.link:hover::after {
+    width: 100%;
+    
+    transform: scaleX(1);
+}
+
+.link6 {
+    padding: 10px 10px;
+
+    text-decoration: none;
+    color: #444;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    border-radius: 50px;
+    background: #FFE341;
+}
+
+.link6:hover {
+    color: #000;
+    font-weight: 600;
+}
+
+.section-1 {
+    width: 100%;
+
+    position: relative;
+
+    align-items: center;
+    text-align: center;
+}
+
+.customers-image-container {
+    height: 100%;
+}
+
+.customers-image-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.customers-image-content {
+    top: 20%;
+    position: absolute;
+
+    width: 100%;
+    color: #fff;
+}
+
+.customers-image-content-title {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 120px;
+    font-weight: normal;
+}
+
+.customers-image-content-desc {
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.section-2 {
+    position: relative;
+    margin-top: 0;
+
+    align-items: center;
+    text-align: center;
+}
+
+.cc-container {
+    height: 100%;
+}
+
+.cc-bg {
+    width: 100%;
+    height: 100%;
+    
+    z-index: -1;
+}
+
+.cc-content{
+    top: 13%;
+    right: 5%;
+    position: absolute;
+
+    width: 85%;
+
+}
+
+.cc-content-title {
+    color: #000;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.cc-content-desc {
+    padding-top: 5px;
+
+    color: #444;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.card-wrapper {
+    position: absolute;
+    margin: 0 auto;
+    top: 33%;
+    left: 40%;
+
+    width: 21%;
+
+    z-index: 1;
+ 
+}
+
+
+.card {
+    position: absolute;
+    top: 0;
+    z-index: var(--z-pos, -1);
+
+    transition: transform 0.75s ease-out;
+    transform: rotate(var(--angle)) translateY(-2%) translateX(var(--x-pos));
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.card-wrapper:focus-within .card {
+    transform: rotate(var(--angle-hover)) translateY(-8%) translateX(var(--x-pos-hover));
+}
+
+
+
+.card-wrapper[tabindex="0"] {
+    outline: none;
+}
+.button{
+    margin-top: 10%;
+}
+
+.cta{
+    padding: 2% 7%; 
+    text-decoration: none;
+
+    color: #000;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+
+    border-radius: 50px;
+    background: #FFE341;
+}
+
+.cta:hover {
+    color: #000;
+    font-weight: 700;
+}
+
+
+
+.gallery-card-text-wrapper {
+    position: absolute;
+    top: 30%;
+    left: 1%;
+
+    width: 95%;
+
+}
+
+.gallery-card-title {
+    color: #FFFFFF;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.gallery-card-text {
+    padding-top: 5px;
+
+    color: #FFFFFF;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+.cn-card-text-wrapper {
+    position: absolute;
+    top: 20%;
+    left: 1%;
+
+    width: 95%;
+
+}
+
+.cn-card-title {
+    color: #FFFFFF;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.cn-card-text {
+    padding-top: 5px;
+
+    color: #FFFFFF;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.reviews-card-text-wrapper {
+    position: absolute;
+    top: 35%;
+    left: 3%;
+
+    width: 85%;
+
+}
+
+.reviews-card-title {
+    color: #FFFFFF;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.reviews-card-text {
+    padding-top: 5px;
+
+    color: #FFFFFF;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+
+
+
+.section-3 {
+    position: relative;
+    margin-top: 0;
+
+    align-items: center;
+    text-align: center;
+
+    background-color: #FFE341;
+}
+
+.gallery-container {
+    height: 100%;
+}
+
+.gallery-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-content{
+    top: 13%;
+    left: 20%;
+    position: absolute;
+
+    width: 65%;
+
+}
+
+.gallery-content-title {
+    color: #000;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.gallery-content-desc {
+    padding-top: 5px;
+
+    color: #444;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.gallery-pic {
+    position: absolute;
+    top:30%;
+    right: 70%;
+}
+
+.gallery {
+    max-width: 350px;
+    max-height: auto;
+}
+
+.memories-wrapper {
+    position: absolute;
+    width: 70%;
+    bottom: 10%;
+    left: 10%;
+}
+
+.memories-content {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+
+    width: 35%;
+}
+
+
+.m1 {
+    color: #000;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.m2 {
+    padding-top: 5px;
+
+    color: #000;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.best-memories-content{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+
+    width: 35%;
+}
+
+
+.bm1 {
+    color: #000;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.bm2 {
+    padding-top: 5px;
+
+    color: #000;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+.button2 {
+    margin-top: 50%;
+    margin-left: 50%;
+}
+
+
+
+
+.section-4 {
+    position: relative;
+    margin-top: 0;
+
+    align-items: center;
+    text-align: center;
+
+    background-color: #ffffff;
+}
+
+.cn-container {
+    height: 100%;
+}
+
+.cn-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.cn-content{
+    top: 13%;
+    left: 20%;
+    position: absolute;
+
+    width: 65%;
+
+}
+
+.cn-content-title {
+    color: #000;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.cn-content-desc {
+    padding-top: 5px;
+
+    color: #444;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.cn-pic {
+    position: absolute;
+    top:40%;
+    right: 50%;
+}
+
+.cn {
+    max-width: 340px;
+    max-height: auto;
+}
+
+
+.notes-content{
+    position: absolute;
+    top: 50%;
+    left: 55%;
+
+    width: 25%;
+}
+
+
+.n1 {
+    color: #000;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.n2 {
+    padding-top: 5px;
+
+    color: #000;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.button1{
+    margin-top: 20%;
+}
+
+.cta1{
+    width: 155px;
+    height: 55px;
+
+    padding: 15px 30px;
+    text-decoration: none;
+
+    color: #444;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+
+    border-radius: 50px;
+    background: #FFE341;
+
+    
+}
+
+.cta1:hover {
+    color: #000;
+    font-weight: 700;
+}
+
+
+
+
+
+.section-5 {
+    position: relative;
+    margin-top: 0;
+
+    align-items: center;
+    text-align: center;
+
+    background-color: #FFE341;
+}
+
+.reviews-container {
+    height: 100%;
+}
+
+.reviews-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.reviews-content{
+    top: 13%;
+    left: 20%;
+    position: absolute;
+
+    width: 65%;
+
+}
+
+.reviews-content-title {
+    color: #000;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.reviews-content-desc {
+    padding-top: 5px;
+
+    color: #444;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.reviews-pic {
+    position: absolute;
+    top:30%;
+    right: 70%;    
+}
+
+.reviews {
+    max-width: 350px;
+    max-height: auto;
+}
+
+
+.wrapper {
+    position: absolute;
+    width: 70%;
+    bottom: 10%;
+    left: 10%;
+}
+
+
+
+.comments-content {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+
+    width: 35%;
+}
+
+
+.c1 {
+    color: #000;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.c2 {
+    padding-top: 5px;
+
+    color: #000;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.ratings-content{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+
+    width: 35%;
+}
+
+
+.r1 {
+    color: #000;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.r2 {
+    padding-top: 5px;
+
+    color: #000;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+.button2 {
+    margin-top: 50%;
+    margin-left: 50%;
+}
+
+
+
+
+
+
+.section-6 {
+    position: relative;
+    margin-top: 0;
+
+    align-items: center;
+    text-align: center;
+
+    background-color: #ffffff;
+}
+
+.customers-end-container {
+    height: 60%;
+}
+
+.customers-bg-small {
+    width: 100%;
+    height: 100%;
+}
+
+.customers-content{
+    top: 15%;
+    left: 20%;
+    position: absolute;
+
+    width: 63%;
+
+}
+
+.customers-content-title {
+    color: #000;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+
+    margin-bottom: 2%;
+}
+
+.customers-content-desc {
+    padding-top: 5px;
+    padding-right: 30px;
+
+    color: #444;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+.footer {
+    width: 100%;
+    height: 40%;
+
+    background-color: #000;
+}
+
+.footer-content {
+    position: absolute;
+    bottom: 6%;
+    left: 5%;
+    width: 30%;
+
+    text-align: left;
+}
+
+.footer-name {
+    color: #fff;
+    font-family: 'Single Day', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.footer-address-1 {
+    padding-top: 20px;
+
+    color: #fff;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer-address-2 {
+    padding-top: 30px;
+
+    color: #fff;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.contact-header {
+    position: absolute;
+    bottom: 28%;
+    right: 45%;
+
+    color: #fff;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.contacts {
+    position: absolute;
+    bottom: 3%;
+    left: 43%;
+}
+
+.contact {
+    padding-block: 5px;
+
+    display: flex;
+    align-items: center;
+ }
+
+.facebook {
+    padding-left: 15px;
+
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.instagram {
+    padding-left: 15px;
+
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.email {
+    padding-left: 15px;
+    
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.footer-content-2 {
+    position: absolute;
+    bottom: 13%;
+    right: 5%;
+
+    width: 20%;
+
+    text-align: left;
+    color: #fff;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
