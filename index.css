@@ -1,810 +1,874 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    height: 100vh;
+  height: 100vh;
 
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 
 section {
-    height: 100vh;
+  height: 100vh;
 
-    scroll-snap-align: start;
+  scroll-snap-align: start;
 }
 
 header {
-    width: 100%;
+  width: 100%;
 
-    position: fixed;
-    top: 0;
-    z-index: 2;
+  position: fixed;
+  top: 0;
+  z-index: 2;
 
-    display: flex;
-    user-select: none;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  user-select: none;
+  align-items: center;
+  text-align: center;
 }
 
 .nav {
-    height: 80px;
-    background-color: #FFFCF7;
-    border-bottom: 3px solid #FFE341;
+  height: 80px;
+  background-color: #FFFCF7;
+  border-bottom: 3px solid #FFE341;
 }
 
 .logo-container {
-    margin-top: auto;
-    width: 150px;
-    height: 150px;
+  margin-top: auto;
+  width: 150px;
+  height: 150px;
 }
 
 .logo {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .navbar-links {
-    width: 90%;
-    height: 30px;
+  width: 90%;
+  height: 30px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
 }
 
 .link {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 
-    text-decoration: none;
-    color: #444;
-    font-family: 'Playfair Display SC', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
+  text-decoration: none;
+  color: #444;
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .link::after {
-    content: "";
-    position: absolute;
+  content: "";
+  position: absolute;
 
-    width: 100%;
-    height: 3px;
-    left: 0;
-    bottom: -6px;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: -6px;
 
-    background-color: #FFE341;
+  background-color: #FFE341;
 
-    transform: scaleX(0);
-    transition: .3s;
+  transform: scaleX(0);
+  transition: .3s;
 }
 
 .link:hover {
-    color: #000;
-    font-weight: 600;
+  color: #000;
+  font-weight: 600;
 }
 
 .link:hover::after {
-    width: 100%;
+  width: 100%;
 
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .link6 {
-    padding: 10px 10px;
+  padding: 10px 10px;
 
-    text-decoration: none;
-    color: #444;
-    font-family: 'Playfair Display SC', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
+  text-decoration: none;
+  color: #444;
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 
-    border-radius: 50px;
-    background: #FFE341;
+  border-radius: 50px;
+  background: #FFE341;
+
+  transition: box-shadow 0.1s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .link6:hover {
-    color: #000;
-    font-weight: 600;
+  color: #000;
+  font-weight: 600;
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .section-1 {
-    width: 100%;
+  width: 100%;
 
-    position: relative;
+  position: relative;
 
-    align-items: center;
-    text-align: center;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-image-container {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-image-bg {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-image-content {
-    top: 30%;
-    left: 12%;
+  top: 30%;
+  left: 12%;
 
-    position: absolute;
+  position: absolute;
 
-    width: 80%;
-    color: #fff;
+  width: 80%;
+  color: #fff;
 }
 
 .hero-image-title {
-    font-family: 'Single Day', sans-serif;
-    font-size: 120px;
-    font-weight: normal;
+  font-family: 'Single Day', sans-serif;
+  font-size: 120px;
+  font-weight: normal;
 }
 
 .hero-image-desc {
-    padding-top: 40px;
+  padding-top: 40px;
 
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 30px;
-    font-weight: 400;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .section-2 {
-    width: 100%;
+  width: 100%;
 
-    position: relative;
-    margin-top: 0;
+  position: relative;
+  margin-top: 0;
 
-    align-items: center;
-    text-align: center;
+  align-items: center;
+  text-align: center;
 }
 
 .featured-products-container {
-    height: 100%;
+  height: 100%;
 }
 
 .featured-products-bg {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .featured-products-content {
-    top: 16%;
-    left: 26%;
-    position: absolute;
+  top: 16%;
+  left: 26%;
+  position: absolute;
 
-    width: 50%;
+  width: 50%;
 }
 
 .featured-products-title {
-    color: #000;
-    font-family: 'Playfair Display SC', sans-serif;
-    font-size: 50px;
-    font-weight: 400;
+  color: #000;
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
 }
 
 .featured-products-desc {
-    padding-top: 5px;
+  padding-top: 5px;
 
-    color: #444;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+  color: #444;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .featured-product-1 {
-    position: absolute;
-    left: 8%;
-    bottom: 31%;
+  position: absolute;
+  left: 8%;
+  bottom: 31%;
 
-    width: 300px;
-    height: 180px;
+  width: 300px;
+  height: 180px;
 }
 
 .featured-product-1-img {
-    width: 100%;
-    height: 100%;
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  height: auto;
+
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.featured-product-1 img:hover {
+  z-index: 2;
+
+  top: 20%;
+  transform: scale(1.3);
 }
 
 .featured-product-1-content {
-    position: absolute;
-    left: 8%;
-    bottom: 10%;
+  position: absolute;
+  left: 8%;
+  bottom: 10%;
 
-    width: 23%;
+  width: 23%;
 }
 
 .featured-product-1-title {
-    color: #000;
-    font-family: 'Single Day', sans-serif;
-    font-size: 30px;
-    font-weight: 400;
+  color: #000;
+  font-family: 'Single Day', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .featured-product-1-desc:hover {
-    color: #000;
-    font-weight: 600;
+  color: #000;
+  font-weight: 600;
 }
 
 .featured-product-1-desc {
-    padding-top: 5px;
+  padding-top: 5px;
 
-    color: #444;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
+  color: #444;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .featured-product-2 {
-    position: absolute;
-    left: 40%;
-    bottom: 31%;
+  position: absolute;
+  left: 40%;
+  bottom: 31%;
 
-    width: 300px;
-    height: 180px;
+  width: 300px;
+  height: 180px;
 }
 
 .featured-product-2-img {
-    width: 100%;
-    height: 100%;
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  height: auto;
+
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.featured-product-2 img:hover {
+  z-index: 2;
+
+  top: 20%;
+  transform: scale(1.3);
 }
 
 .featured-product-2-content {
-    position: absolute;
-    left: 40%;
-    bottom: 13.5%;
+  position: absolute;
+  left: 40%;
+  bottom: 13.5%;
 
-    width: 23%;
+  width: 23%;
 }
 
 .featured-product-2-title {
-    color: #000;
-    font-family: 'Single Day', sans-serif;
-    font-size: 30px;
-    font-weight: 400;
+  color: #000;
+  font-family: 'Single Day', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .featured-product-2-desc:hover {
-    color: #000;
-    font-weight: 600;
+  color: #000;
+  font-weight: 600;
 }
 
 .featured-product-2-desc {
-    padding-top: 5px;
+  padding-top: 5px;
 
-    color: #444;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
+  color: #444;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .featured-product-3 {
-    position: absolute;
-    left: 72%;
-    bottom: 31%;
+  position: absolute;
+  left: 72%;
+  bottom: 31%;
 
-    width: 300px;
-    height: 180px;
+  width: 300px;
+  height: 180px;
 }
 
 .featured-product-3-img {
-    width: 100%;
-    height: 100%;
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  height: auto;
+
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.featured-product-3 img:hover {
+  z-index: 2;
+
+  top: 20%;
+  transform: scale(1.3);
 }
 
 .featured-product-3-content {
-    position: absolute;
-    left: 72%;
-    bottom: 13.5%;
+  position: absolute;
+  left: 72%;
+  bottom: 13.5%;
 
-    width: 23%;
+  width: 23%;
 }
 
 .featured-product-3-title {
-    color: #000;
-    font-family: 'Single Day', sans-serif;
-    font-size: 30px;
-    font-weight: 400;
+  color: #000;
+  font-family: 'Single Day', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .featured-product-3-desc:hover {
-    color: #000;
-    font-weight: 600;
+  color: #000;
+  font-weight: 600;
 }
 
 .featured-product-3-desc {
-    padding-top: 5px;
+  padding-top: 5px;
 
-    color: #444;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
+  color: #444;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .view-more-link {
-    position: absolute;
-    bottom: 5%;
-    left: 47%;
-}
-
-.view-more:hover {
-    color: #000;
-    font-weight: 600;
+  position: absolute;
+  bottom: 5%;
+  left: 47%;
 }
 
 .view-more {
-    padding: 13px 20px;
+  padding: 13px 20px;
 
-    text-decoration: none;
-    color: #444;
-    font-family: 'Playfair Display SC', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+  text-decoration: none;
+  color: #444;
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 
-    border-radius: 30px;
-    background: #FFE341;
+  border-radius: 30px;
+  background: #FFE341;
+
+  transition: box-shadow 0.1s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.view-more:hover {
+  color: #000;
+  font-weight: 600;
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .section-3 {
-    position: relative;
-    margin-top: 0;
+  position: relative;
+  margin-top: 0;
 
-    align-items: center;
-    text-align: center;
+  align-items: center;
+  text-align: center;
 
-    background-color: #FFE341;
+  background-color: #FFE341;
 }
 
 .new-products-container {
-    height: 100%;
+  height: 100%;
 }
 
 .new-products-bg {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .new-products-content {
-    top: 16%;
-    left: 20%;
-    position: absolute;
+  top: 16%;
+  left: 20%;
+  position: absolute;
 
-    width: 65%;
+  width: 65%;
 }
 
 .new-products-title {
-    color: #000;
-    font-family: 'Playfair Display SC', sans-serif;
-    font-size: 50px;
-    font-weight: 400;
+  color: #000;
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
 }
 
 .new-products-desc {
-    padding-top: 5px;
+  padding-top: 5px;
 
-    color: #444;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+  color: #444;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .new-product-1 {
-    position: absolute;
-    left: 8%;
-    bottom: 6%;
+  position: absolute;
+  left: 8%;
+  bottom: 6%;
 
-    width: 600px;
-    height: 340px;
+  width: 600px;
+  height: 340px;
 }
 
 .new-product-1-img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .new-product-1-content {
-    position: absolute;
-    right: 8%;
-    bottom: 30%;
+  position: absolute;
+  right: 8%;
+  bottom: 30%;
 
-    width: 33%;
+  width: 33%;
 
-    text-align: left;
+  text-align: left;
 }
 
 .new-product-1-title {
-    color: #000;
-    font-family: 'Single Day', sans-serif;
-    font-size: 50px;
-    font-weight: 400;
+  color: #000;
+  font-family: 'Single Day', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
 }
 
 .new-product-1-desc {
-    padding-top: 20px;
+  padding-top: 20px;
 
-    color: #444;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+  color: #444;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .learn-more-link {
-    position: absolute;
+  position: absolute;
 
-    bottom: 13%;
-    right: 20%;
-}
-
-.learn-more:hover {
-    color: #000;
-    font-weight: 600;
+  bottom: 13%;
+  right: 20%;
 }
 
 .learn-more {
-    padding: 13px 20px;
+  padding: 13px 20px;
 
-    text-decoration: none;
-    color: #444;
-    font-family: 'Playfair Display SC', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+  text-decoration: none;
+  color: #444;
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 
-    border-radius: 30px;
-    background: #FFE341;
+  border-radius: 30px;
+  background: #FFE341;
+
+  transition: box-shadow 0.1s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.learn-more:hover {
+  color: #000;
+  font-weight: 600;
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .section-4 {
-    position: relative;
-    margin-top: 0;
+  position: relative;
+  margin-top: 0;
 
-    align-items: center;
-    text-align: center;
+  align-items: center;
+  text-align: center;
 
-    background-color: #FFE341;
+  background-color: #FFE341;
 }
 
 .new-products-2-container {
-    height: 100%;
+  height: 100%;
 }
 
 .new-products-bg2 {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .new-products-2-content {
-    top: 16%;
-    left: 20%;
-    position: absolute;
+  top: 16%;
+  left: 20%;
+  position: absolute;
 
-    width: 65%;
+  width: 65%;
 }
 
 .new-products-2-title {
-    color: #000;
-    font-family: 'Playfair Display SC', sans-serif;
-    font-size: 50px;
-    font-weight: 400;
+  color: #000;
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
 }
 
 .new-products-2-desc {
-    padding-top: 5px;
+  padding-top: 5px;
 
-    color: #444;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+  color: #444;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .new-product-2 {
-    position: absolute;
-    right: 8%;
-    bottom: 6%;
+  position: absolute;
+  right: 8%;
+  bottom: 6%;
 
-    width: 600px;
-    height: 340px;
+  width: 600px;
+  height: 340px;
 }
 
 .new-product-2-img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .new-product-2-content {
-    position: absolute;
-    left: 8%;
-    bottom: 30%;
+  position: absolute;
+  left: 8%;
+  bottom: 30%;
 
-    width: 33%;
+  width: 33%;
 
-    text-align: left;
+  text-align: left;
 }
 
 .new-product-2-title {
-    color: #000;
-    font-family: 'Single Day', sans-serif;
-    font-size: 50px;
-    font-weight: 400;
+  color: #000;
+  font-family: 'Single Day', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
 }
 
 .new-product-2-desc {
-    padding-top: 20px;
+  padding-top: 20px;
 
-    color: #444;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+  color: #444;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .learn-more-link-2 {
-    position: absolute;
-    bottom: 13%;
-    left: 15%;
-}
-
-.learn-more-2:hover {
-    color: #000;
-    font-weight: 600;
+  position: absolute;
+  bottom: 13%;
+  left: 15%;
 }
 
 .learn-more-2 {
-    padding: 13px 20px;
+  padding: 13px 20px;
 
-    text-decoration: none;
-    color: #444;
-    font-family: 'Playfair Display SC', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+  text-decoration: none;
+  color: #444;
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 
-    border-radius: 30px;
-    background: #FFE341;
+  border-radius: 30px;
+  background: #FFE341;
+
+  transition: box-shadow 0.1s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.learn-more-2:hover {
+  color: #000;
+  font-weight: 600;
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .section-5 {
-    position: relative;
-    margin-top: 0;
+  position: relative;
+  margin-top: 0;
 
-    align-items: center;
-    text-align: center;
+  align-items: center;
+  text-align: center;
 }
 
 .events-and-happenings-container {
-    height: 100%;
+  height: 100%;
 }
 
 .events-and-happenings-bg-1 {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .events-and-happenings-content {
-    top: 25%;
-    right: 8%;
-    position: absolute;
+  top: 25%;
+  right: 8%;
+  position: absolute;
 
-    width: 37%;
+  width: 37%;
 }
 
 .image-card {
-    position: absolute;
-    margin: 0 auto;
-    top: 33%;
-    left: 20%;
+  position: absolute;
+  margin: 0 auto;
+  top: 33%;
+  left: 20%;
 
-    width: 19%;
+  width: 19%;
 }
 
 .card {
-    position: absolute;
-    top: 0;
-    z-index: var(--z-pos, -1);
+  position: absolute;
+  top: 0;
+  z-index: var(--z-pos, -1);
 
-    transition: transform 0.75s ease-out;
-    transform: rotate(var(--angle)) translateY(-2%) translateX(var(--x-pos));
+  transition: transform 0.75s ease-out;
+  transform: rotate(var(--angle)) translateY(-2%) translateX(var(--x-pos));
 }
 
 .card img {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .card.main:hover~.card {
-    transform: rotate(var(--angle-hover)) translateY(-8%) translateX(var(--x-pos-hover));
+  transform: rotate(var(--angle-hover)) translateY(-8%) translateX(var(--x-pos-hover));
 }
 
 .events-and-happenings-1-title {
-    color: #000;
-    font-family: 'Playfair Display SC', sans-serif;
-    font-size: 50px;
-    font-weight: 400;
+  color: #000;
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
 }
 
 .events-and-happenings-1-desc {
-    padding-top: 25px;
+  padding-top: 50px;
 
-    color: #444;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+  color: #444;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .view-more-link-2 {
-    position: absolute;
-    top: 80%;
-    right: 20%;
-}
-
-.view-more-2:hover {
-    color: #000;
-    font-weight: 600;
+  position: absolute;
+  top: 80%;
+  right: 20%;
 }
 
 .view-more-2 {
-    padding: 13px 20px;
+  padding: 13px 20px;
 
-    text-decoration: none;
-    color: #444;
-    font-family: 'Playfair Display SC', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+  text-decoration: none;
+  color: #444;
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 
-    border-radius: 30px;
-    background: #FFE341;
+  border-radius: 30px;
+  background: #FFE341;
+
+  transition: box-shadow 0.1s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.view-more-2:hover {
+  color: #000;
+  font-weight: 600;
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .section-6 {
-    position: relative;
-    margin-top: 0;
+  position: relative;
+  margin-top: 0;
 
-    align-items: center;
-    text-align: center;
+  align-items: center;
+  text-align: center;
 }
 
 .events-and-happenings-container-2 {
-    height: 60%;
+  height: 60%;
 }
 
 .events-and-happenings-bg-2 {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .events-and-happenings-content-2 {
-    top: 16%;
-    right: 26%;
-    position: absolute;
+  top: 16%;
+  right: 26%;
+  position: absolute;
 
-    width: 45%;
+  width: 45%;
 }
 
 .events-and-happenings-2-title {
-    color: #000;
-    font-family: 'Playfair Display SC', sans-serif;
-    font-size: 50px;
-    font-weight: 400;
+  color: #000;
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
 }
 
 .events-and-happenings-2-desc {
-    padding-top: 25px;
+  padding-top: 25px;
 
-    color: #444;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+  color: #444;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .footer {
-    width: 100%;
-    height: 40%;
+  width: 100%;
+  height: 40%;
 
-    background-color: #000;
+  background-color: #000;
 }
 
 .footer-content {
-    position: absolute;
-    bottom: 6%;
-    left: 5%;
-    width: 30%;
+  position: absolute;
+  bottom: 6%;
+  left: 5%;
+  width: 30%;
 
-    text-align: left;
+  text-align: left;
 }
 
 .footer-name {
-    color: #fff;
-    font-family: 'Single Day', sans-serif;
-    font-size: 40px;
-    font-weight: 400;
+  color: #fff;
+  font-family: 'Single Day', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
 }
 
 .footer-address-1 {
-    padding-top: 20px;
+  padding-top: 20px;
 
-    color: #fff;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+  color: #fff;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .footer-address-2 {
-    padding-top: 30px;
+  padding-top: 30px;
 
-    color: #fff;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+  color: #fff;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .contact-header {
-    position: absolute;
-    bottom: 28%;
-    right: 45%;
+  position: absolute;
+  bottom: 28%;
+  right: 45%;
 
-    color: #fff;
-    font-family: 'Playfair Display SC', sans-serif;
-    font-size: 30px;
-    font-weight: 400;
+  color: #fff;
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .contacts {
-    position: absolute;
-    bottom: 3%;
-    left: 43%;
+  position: absolute;
+  bottom: 3%;
+  left: 43%;
 }
 
 .contact {
-    padding-block: 5px;
+  padding-block: 5px;
 
-    display: flex;
-    align-items: center;
- }
+  display: flex;
+  align-items: center;
+}
 
 .facebook {
-    padding-left: 15px;
+  padding-left: 15px;
 
-    text-decoration: none;
-    color: #fff;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .instagram {
-    padding-left: 15px;
+  padding-left: 15px;
 
-    text-decoration: none;
-    color: #fff;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .email {
-    padding-left: 15px;
-    
-    text-decoration: none;
-    color: #fff;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+  padding-left: 15px;
+
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .footer-content-2 {
-    position: absolute;
-    bottom: 13%;
-    right: 5%;
+  position: absolute;
+  bottom: 13%;
+  right: 5%;
 
-    width: 20%;
+  width: 20%;
 
-    text-align: left;
-    color: #fff;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+  text-align: left;
+  color: #fff;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 }
